@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  position: relative;
+  width: 33.33%; /* Adjust according to your layout */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white;
+  padding: 20px;
+  display: none;
+}
+
+/* Add more CSS for responsive design */
+
+
+/* Add more CSS for responsive design */
+
+</style>
+<body>
+  <div class="gallery" id="gallery1">
+    <div class="item" data-category="nature">
+      <img src="ecommpro/laptop2.jpg" alt="Nature Image 1">
+      <div class="overlay">
+        <h3>Nature Image 1</h3>
+        <p>Description of nature image 1...</p>
+      </div>
+    </div>
+    <!-- More items here -->
+  </div>
+  
+  <div class="gallery" id="gallery2">
+    <div class="item" data-category="city">
+      <img src="ecommpro/bag1.jpg" alt="City Image 1">
+      <div class="overlay">
+        <h3>City Image 1</h3>
+        <p>Description of city image 1...</p>
+      </div>
+    </div>
+    <!-- More items here -->
+  </div>
+  
+  <div class="filters">
+    <button onclick="filterItems('all')">All</button>
+    <button onclick="filterItems('nature')">Nature</button>
+    <button onclick="filterItems('city')">City</button>
+    <!-- Additional filter buttons -->
+  </div>
+  
+      <script>
+function filterItems(category) {
+  const galleries = document.querySelectorAll('.gallery');
+
+  galleries.forEach(gallery => {
+    const items = gallery.querySelectorAll('.item');
+
+    items.forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+        // Hide overlay if item is filtered out
+        item.querySelector('.overlay').style.display = 'none';
+      }
+    });
+  });
+}
+
+document.querySelectorAll('.item').forEach(item => {
+  item.addEventListener('click', function() {
+    // Toggle overlay display
+    const overlay = this.querySelector('.overlay');
+    overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+      </script>
+      
+</body>
+</html>

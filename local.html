@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const good = localStorage.setItem("firstName", "John");
+        console.log(good);
+        const students = ["Peter", "John", "Mary", "Sam"];
+        localStorage.setItem("myStudent", JSON.stringify(students));
+
+        const getPerson = localStorage.getItem("firstName");
+        console.log(getPerson);
+        const getAllStudent = localStorage.getItem("myStudent");
+        console.log(getAllStudent);
+        localStorage.removeItem("firstName");
+    </script>
+</body>
+</html>

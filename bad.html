@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Gallery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+    .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: lightgray;
+}
+
+.filter-btn:hover {
+  background-color: darkgray;
+}
+
+</style>
+
+<div class="filter">
+  <button class="filter-btn" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+  <button class="filter-btn" data-filter="architecture">Architecture</button>
+  <!-- Add more buttons for other categories -->
+</div>
+
+
+<div class="container">
+  <div class="row gy-4 gx-4">
+    <div class="col-md-6">
+      <div class="item nature">
+        <img src="https://cdn.pixabay.com/photo/2019/11/26/17/48/girl-4655079_640.jpg" alt="Nature 1">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="item architecture">
+        <img src="https://cdn.pixabay.com/photo/2018/02/24/20/40/fashion-3179178_640.jpg" alt="Architecture 1">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="gallery">
+  <div class="item nature">
+    <img src="https://cdn.pixabay.com/photo/2019/11/26/17/48/girl-4655079_640.jpg" alt="Nature 1">
+  </div>
+  <div class="item architecture">
+    <img src="https://cdn.pixabay.com/photo/2018/02/24/20/40/fashion-3179178_640.jpg" alt="Architecture 1">
+  </div>
+</div> -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = btn.dataset.filter;
+      
+      items.forEach(item => {
+        item.style.display = 'none';
+        if (item.classList.contains(filter) || filter === 'all') {
+          item.style.display = 'block';
+        }
+      });
+    });
+  });
+});
+
+</script>
+</body>
+</html>

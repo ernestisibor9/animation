@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .msg {
+      color: #fff;
+      background-color: blue;
+      padding: 25px;
+      margin: auto;
+    }
+    .box-msg {
+      color: #fff;
+      background-color: red;
+      padding: 25px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <!-- <h1 id="hello">Hello world</h1>
+    <button class="btn btn-success">Click Me</button> -->
+
+    <div>
+      <h2 class="msg">This life is beautiful</h2>
+      <button class="btn btn-warning">Change Style</button>
+    </div>
+
+    <script>
+      const msg = document.querySelector(".msg");
+      const btn = document.querySelector(".btn");
+
+      // Add EventListener
+      btn.addEventListener("click", () => {
+        // Check if the element contains the class msg
+        if (msg.classList.contains("msg")) {
+          msg.classList.remove("msg");
+          msg.classList.add("box-msg");
+        } else {
+          document.write("<h1>It does not contain</h1>");
+        }
+      });
+    </script>
+
+    <!-- <script>
+        const hello = document.getElementById("hello");
+        const btn = document.querySelector(".btn");
+        
+        // Add Event Listeners to html
+        btn.addEventListener("click", function(){
+            hello.innerHTML = "Alabian Solutions Limited";
+            alert("This is Nigeria")
+        })
+    </script> -->
+  </body>
+</html>

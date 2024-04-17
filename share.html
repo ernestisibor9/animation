@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="post-content">
+        <!-- Your post content goes here -->
+        <p class="para">This is my awesome post!</p>
+    </div>
+
+    <!-- Share buttons -->
+    <div class="share-buttons">
+        <a href="#" class="facebook-share">Share on Facebook</a>
+        <a href="#" class="twitter-share">Share on Twitter</a>
+        <a href="#" class="whatsapp-share">Share on WhatsApp</a>
+    </div>
+
+    <script>
+        // script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const facebookShareBtn = document.querySelector(".facebook-share");
+    const twitterShareBtn = document.querySelector(".twitter-share");
+    const whatsappShareBtn = document.querySelector(".whatsapp-share");
+    const myPara = document.querySelector(".para");
+
+    // Facebook share functionality
+    facebookShareBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        // Replace URL and other parameters with your actual content
+        window.open("https://www.facebook.com/sharer/sharer.php?u=YOUR_URL", "_blank");
+    });
+
+    // Twitter share functionality
+    twitterShareBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        // Replace URL and other parameters with your actual content
+        window.open("https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT", "_blank");
+    });
+
+    // WhatsApp share functionality
+    whatsappShareBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        // Replace URL and other parameters with your actual content
+        window.open(`https://api.whatsapp.com/send?text=${myPara.innerHTML}%20-%20YOUR_URL`, "_blank");
+    });
+});
+    </script>
+</body>
+</html>

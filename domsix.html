@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="pro">dfdf</div>
+    <script>
+      const products = [
+        {
+          id: 1,
+          name: "iPhone 11 Pro Max",
+          description: "Phone is the most popular",
+          price: 34
+        },
+        {
+          id: 2,
+          name: "Television",
+          description: "Television is the most popular",
+          price: 34
+        },
+        {
+          id: 3,
+          name: "Refrigerator",
+          description: "Refrigerator is the most popular",
+          price: 34
+        }
+      ];
+
+        let displayProduct = "";
+
+        // Loop through the list of products
+        products.map((product)=>{
+            displayProduct += `
+            <div>
+                <h1>${product.name}</h1>
+                <p>${product.description}</p>
+                <p>&#8358; ${product.price}</p>
+            </div>
+            `;
+                      // Apply innerHTML to the pro
+          document.getElementById("pro").innerHTML = displayProduct;
+          console.log(pro);
+        })
+ 
+    </script>
+  </body>
+</html>

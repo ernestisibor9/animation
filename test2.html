@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Change as needed */
+}
+
+.navbar {
+  background-color: transparent; /* Initial background color */
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.content {
+  margin-top: 100px; /* Ensure content does not overlap with fixed navbar */
+  padding: 20px;
+  height: 2000px; /* Just for demonstration */
+}
+
+</style>
+<body>
+  <div class="navbar" id="navbar">
+    <a href="#" class="logo">Logo</a>
+    <ul class="nav-links">
+      <li><a href="#" id="nav-links">Home</a></li>
+      <li><a href="#" id="nav-links">About</a></li>
+      <li><a href="#" id="nav-links">Services</a></li>
+      <li><a href="#" id="nav-links">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <!-- Your content here -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed vel ipsum varius, ullamcorper mi eu, convallis lacus. Integer dignissim, libero nec vestibulum dictum, arcu odio fermentum massa, quis tincidunt lectus lacus eget lorem. Cras eget nisi quis turpis varius fermentum. Morbi congue, turpis at efficitur vestibulum, metus ex dapibus metus, nec sodales nulla magna vel metus. Nullam auctor diam sit amet felis lacinia, eget eleifend nunc convallis. Nulla quis magna a lectus dignissim dignissim. Phasellus et nibh ac nisi finibus tristique ut id est. Proin non felis elit. Cras ullamcorper urna ut dictum ultrices.</p>
+    <!-- End of content -->
+  </div>
+
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").style.backgroundColor = "yellow"; // Change background color on scroll
+   
+  } else {
+    document.getElementById("navbar").style.backgroundColor = "transparent"; // Revert to initial background color
+  }
+}
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

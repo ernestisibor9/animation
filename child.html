@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li>Orange</li>
+      <li>Mango</li>
+      <li id="apple">Apple</li>
+      <li>Pawpaw</li>
+      <li>Cashew</li>
+    </ul>
+
+    <h1 class="alabian">ALABIAN SOLUTIONS LIMITED</h1>
+
+    <script>
+      const allFruits = document.getElementById("apple");
+      const mySibling = allFruits.previousElementSibling;
+
+      mySibling.style.backgroundColor = 'red';
+      mySibling.style.padding = '25px';
+      mySibling.style.margin = '25px';
+      mySibling.style.color = 'white';
+      mySibling.style.borderRadius = '10px';
+      mySibling.style.width = '100px';
+
+      // Apply CSS to the element h1
+      const alabian = document.querySelector(".alabian");
+
+        alabian.style.backgroundColor = 'blue';
+        alabian.style.padding = '25px';
+        alabian.style.color = 'white';
+        alabian.style.borderRadius = '10px';
+        alabian.style.fontFamily = "Roboto";
+        alabian.style.width = '500px';
+      
+    </script>
+  </body>
+</html>

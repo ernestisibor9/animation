@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pen{
+        color: #fff;
+        background-color: blue;
+        padding: 25px;
+    }
+</style>
+<body>
+
+
+    <script>
+        const myNewElement = document.createElement('div');
+        const bodyDiv = document.createTextNode("Ikeja is the capital city of Lagos state");
+
+        // Append the child to the parent
+        myNewElement.appendChild(bodyDiv);
+        // Add a class to the parent element
+        myNewElement.classList.add('pen')
+        document.body.appendChild(myNewElement);
+        console.log(myNewElement);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .disabled{
+         background-color: red;
+        color: #fff;
+    }
+</style>
+<body>
+
+    <div id="disable" class="disabled">Disable your enemies</div>
+
+    
+    <script>
+        const dis = document.getElementById("disable");
+            dis.remove()
+
+
+        const archor = document.createElement('a');
+        // Add an id to the parent stag
+        archor.id = 'book';
+        archor.href= "https://github.com/"
+        // Add a content
+        archor.textContent = "Github";
+        // Displays on the browser
+        document.body.appendChild(archor);
+        console.log(archor);
+    </script>
+</body>
+</html>

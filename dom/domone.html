@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .note{
+        color: #fff;
+        background-color: tomato;
+        padding: 25px;
+    }
+    .Lagos{
+        color: yellow;
+        background-color: red;
+        padding: 30px;
+    }
+    .Enugu{
+        color: blue;
+        background-color: yellow;
+        padding: 30px;
+    }
+</style>
+<body>
+    <h1 id="intro">I LOVE JAVASCRIPT</h1>
+
+    <h2 id="naija">Welcome to Nigeria</h2>
+
+    <script>
+        const myIntro = document.getElementById("intro");
+        // Add a className to it
+        myIntro.className = "note"
+        myIntro.className = "pencil";
+        console.log(myIntro);
+
+
+        const myCountry = document.querySelector("#naija");
+        myCountry.classList.add("Lagos");
+        myCountry.classList.add("Abuja");
+        myCountry.classList.add("Enugu");
+        myCountry.classList.remove("Abuja");
+        // myCountry.classList.toggle("Kano");
+        if(myCountry.classList.contains("Edo")){
+            console.log("Welcome to Coal city");
+        }
+        else{
+            console.log("Go back to your village...");
+        }
+        console.log(myCountry);
+    </script>
+</body>
+</html>

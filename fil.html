@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #price {
+  font-size: 18px;
+}
+
+</style>
+<body>
+  <div id="price">10,000,000</div>
+<button onclick="convertToShort()">Convert</button>
+
+<script>
+  function convertToShort() {
+  var priceElement = document.getElementById("price");
+  var price = parseInt(priceElement.innerText.replace(/,/g, ''), 10);
+  var shortPrice = abbreviateNumber(price);
+  priceElement.innerText = shortPrice;
+}
+
+function abbreviateNumber(value) {
+  var newValue = value;
+  if (value >= 1000000) {
+    newValue = parseFloat((value / 1000000).toFixed(2)) + "m";
+  }
+  return newValue;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.default-text {
+  display: block;
+}
+
+.hover-text {
+  display: none;
+}
+
+.card:hover .default-text {
+  display: none;
+}
+
+.card:hover .hover-text {
+  display: block;
+}
+
+  </style>
+  <body>
+
+    <div class="card" id="myCard">
+      <div class="card-content">
+        <div class="default-text">Default Text</div>
+        <div class="hover-text">Hovered Text</div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+
+    <script>
+        const products= [
+    {
+        id: 1,
+        name: "iPhone 11",
+        price: 1000,
+    },
+    {
+        id: 2,
+        name: "iPhone 11 Pro",
+        price: 2000
+    },
+    {
+        id: 3,
+        name: "iPhone 11 Pro Max",
+        price: 3000
+    },
+    {
+        id: 4,
+        name: "iPhone 10 Pro Max",
+        price: 4000
+    },
+    {
+        id: 5,
+        name: "iPhone 10 Pro Max",
+        price: 5000
+    }
+];
+
+for(let i = 0; i < products.length; i++){
+    document.write(`<h1>${products[i].name}</h1>` + " " + "<br>");
+    document.write(`<h2 style='color: yellow'>&#8358; ${products[i].price}</h2>`);
+}
+    </script>
+    
+    <script src="array.js"></script>
+
+    <p>Original Price: <del>$50</del></p>
+<p>Discounted Price: $40</p>
+
+</body>
+</html>
